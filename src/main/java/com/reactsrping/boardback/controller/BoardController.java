@@ -2,10 +2,10 @@ package com.reactsrping.boardback.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.reactsrping.boardback.dto.request.board.PostBoardRequestDto;
 import com.reactsrping.boardback.dto.response.board.PostBoardResponseDto;
@@ -14,8 +14,8 @@ import com.reactsrping.boardback.service.BoardService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-@Controller
-@RequestMapping("/api/v1/")
+@RestController
+@RequestMapping("/api/v1/board")
 @RequiredArgsConstructor
 public class BoardController {
     
