@@ -37,7 +37,7 @@ public class BoardEntity {
     public BoardEntity(PostBoardRequestDto dto ,String email){
         
         Date now = Date.from(Instant.now());
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd HH:mm");
         String writeDatetime = sdf.format(now);
 
         this.title = dto.getTitle();
@@ -48,4 +48,9 @@ public class BoardEntity {
         this.viewCount = 0;
         this.writerEmail = email;
     }
+
+    public void increaseViewCount(){
+        this.viewCount++;
+    }
+
 }
